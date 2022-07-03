@@ -1,0 +1,52 @@
+// Наши клиенты
+
+.clients-title {
+  text-align: center;
+}
+
+.clients-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-left: 30px;
+    margin-top: 30px;
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc(100% / 3 - 30px);
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc(100% / 6 - 30px);
+      margin-bottom: 0;
+    }
+  }
+}
+
+.clients-list__link {
+  transition: color var(--transition-function), border var(--transition-function);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 92px;
+
+  color: var(--main-color);
+
+  border: 1px solid var(--icons-color);
+  border-radius: 4px;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+  }
+}
